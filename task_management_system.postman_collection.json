@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "eedcc0cb-84e5-4be7-ba1e-bbe80f785685",
+		"name": "Task Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26686300"
+	},
+	"item": [
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Node.js Task\",\n    \"description\": \"jsda sdfjlsd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks",
+							"host": [
+								"{{CRESCENTEK_API_BASE_URL}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Node.js Task\",\n    \"description\": \"Create apis for inventory management system.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks",
+									"host": [
+										"{{CRESCENTEK_API_BASE_URL}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-gghPzEkoTOYgOJSZsHawU446Nvk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 18:57:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Task created successfully.\",\n    \"data\": {\n        \"title\": \"Node.js Task\",\n        \"description\": \"Create apis for inventory management system.\",\n        \"status\": false,\n        \"_id\": \"646bbb298a3c4b5d8a4648df\",\n        \"createdAt\": \"2023-05-22T18:57:45.549Z\",\n        \"updatedAt\": \"2023-05-22T18:57:45.549Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks/:id",
+							"host": [
+								"{{CRESCENTEK_API_BASE_URL}}"
+							],
+							"path": [
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "646bbb298a3c4b5d8a4648df"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks/:id",
+									"host": [
+										"{{CRESCENTEK_API_BASE_URL}}"
+									],
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "646bbb298a3c4b5d8a4648df"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"118-aZ5VaPG7ymG7LM9MGuXdOgTUPJM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 18:58:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Task updated successfully.\",\n    \"data\": {\n        \"_id\": \"646bbb298a3c4b5d8a4648df\",\n        \"title\": \"Node.js Task\",\n        \"description\": \"Create apis for inventory management system.\",\n        \"status\": true,\n        \"createdAt\": \"2023-05-22T18:57:45.549Z\",\n        \"updatedAt\": \"2023-05-22T18:58:45.724Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks/:id",
+							"host": [
+								"{{CRESCENTEK_API_BASE_URL}}"
+							],
+							"path": [
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "646bbbcd18e25a64f5869271"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks/:id",
+									"host": [
+										"{{CRESCENTEK_API_BASE_URL}}"
+									],
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "646bbbcd18e25a64f5869271"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f-VDXPn9SUXZmMkT008FGFlbcg/fU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 19:00:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Task deleted successfully.\",\n    \"data\": {\n        \"id\": \"646bbbcd18e25a64f5869271\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks?size=10&page=0&order=asc&orderBy=status",
+							"host": [
+								"{{CRESCENTEK_API_BASE_URL}}"
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "646bbbde18e25a64f5869274",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "orderBy",
+									"value": "status"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks?id=646bbbde18e25a64f5869274",
+									"host": [
+										"{{CRESCENTEK_API_BASE_URL}}"
+									],
+									"path": [
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "646bbbde18e25a64f5869274"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"120-7R5RcOrc55dUZ5F6hmzQo9Yq5YU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 19:01:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Successfully fetched task detail.\",\n    \"data\": {\n        \"_id\": \"646bbbde18e25a64f5869274\",\n        \"title\": \"Node.js Task\",\n        \"description\": \"Create apis for inventory management system.\",\n        \"status\": false,\n        \"createdAt\": \"2023-05-22T19:00:46.274Z\",\n        \"updatedAt\": \"2023-05-22T19:00:46.274Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{CRESCENTEK_API_BASE_URL}}/tasks?size=10&page=0&order=asc&orderBy=status",
+									"host": [
+										"{{CRESCENTEK_API_BASE_URL}}"
+									],
+									"path": [
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "646bbbde18e25a64f5869274",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										},
+										{
+											"key": "orderBy",
+											"value": "status"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "960"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c0-4PEqQwNO2d3vNazLqCcsgQS0Zl0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 May 2023 17:56:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Successfully fetched tasks list.\",\n    \"count\": 5,\n    \"data\": [\n        {\n            \"_id\": \"646fa086db5e32e2810c5b4c\",\n            \"title\": \"Node.js Task\",\n            \"description\": \"jsda sdfjlsd\",\n            \"status\": false,\n            \"createdAt\": \"2023-05-25T17:53:10.528Z\",\n            \"updatedAt\": \"2023-05-25T17:53:10.528Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"646e5129c8b1f7d6ca2b8d67\",\n            \"title\": \"dsfa\",\n            \"description\": \"sdafsd\",\n            \"status\": false,\n            \"createdAt\": \"2023-05-24T18:02:19.647Z\",\n            \"updatedAt\": \"2023-05-24T18:02:19.647Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"646e39d660d952bace8a32b8\",\n            \"title\": \"test\",\n            \"description\": \"fdskaj\",\n            \"status\": false,\n            \"createdAt\": \"2023-05-24T16:22:46.111Z\",\n            \"updatedAt\": \"2023-05-24T18:03:20.726Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"646e5531bca744c2f41739a3\",\n            \"title\": \"asfd\",\n            \"description\": \"lorem\",\n            \"status\": true,\n            \"createdAt\": \"2023-05-24T18:19:29.770Z\",\n            \"updatedAt\": \"2023-05-24T18:29:02.475Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"646e5175c8b1f7d6ca2b8d79\",\n            \"title\": \"test2\",\n            \"description\": \"lorem\",\n            \"status\": true,\n            \"createdAt\": \"2023-05-24T18:03:33.711Z\",\n            \"updatedAt\": \"2023-05-24T18:29:07.207Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
